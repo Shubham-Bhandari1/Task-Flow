@@ -5,6 +5,8 @@
  * Run with: npm run seed  (after the app has started at least once so the
  * SQLite file/tables exist — TypeORM's synchronize:true creates them).
  */
+import * as dotenv from 'dotenv';
+dotenv.config();
 import { DataSource } from 'typeorm';
 import { User } from '../users/entities/user.entity';
 import { Task, TaskStatus, TaskPriority } from '../tasks/entities/task.entity';
