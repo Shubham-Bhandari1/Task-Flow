@@ -10,7 +10,11 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api');
 
-  app.use(helmet());
+  app.use(
+    helmet({
+      crossOriginResourcePolicy: { policy: 'cross-origin' },
+    }),
+  );
   app.use(compression());
 
   app.useGlobalPipes(
@@ -24,8 +28,13 @@ async function bootstrap() {
   app.useGlobalFilters(new HttpExceptionFilter());
 
   app.enableCors({
-    origin: process.env.CORS_ORIGIN?.split(',') ?? 'http://localhost:3000',
+    origin: (origin, callback) => {
+      // Allow all origins dynamically (reflects requesting origin for credentials)
+      callback(null, true);
+    },
     credentials: true,
+    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Accept', 'Authorization'],
   });
 
   const port = process.env.PORT ?? 4000;
