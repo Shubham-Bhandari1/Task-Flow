@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+dist/
+out/
+.dist/
+
+# Test coverage
+coverage/
+
+# Logs
+*.log
+
+# Database
+*.sqlite
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# TypeScript build info
+tsconfig.tsbuildinfo
