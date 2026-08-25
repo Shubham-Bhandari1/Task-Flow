@@ -8,7 +8,7 @@
 
 > A full-stack task management application with Kanban boards, list views, subtasks, comments, projects, and a fully persisted light/dark + accent color theme system.
 
-🔗 **Live Demo**: [pyramid-tasks.vercel.app](https://pyramid-tasks.vercel.app) · Click **Continue as Guest** to explore.
+🔗 **Live Demo**: [pyramid-tasks.vercel.app](https://task-flow-rust-five.vercel.app) · Click **Continue as Guest** to explore.
 
 ---
 
